@@ -4,7 +4,7 @@ import { Loader, Card, FormField } from '../components';
 
 const RenderCards = ({ data, title }) => {
   if(data?.length > 0) {
-    return data.map((post) => <Card key={post.id} {...post} />)
+    return data.map((post) => <Card key={post._id} {...post} />)
   }
 
   return (
@@ -14,7 +14,7 @@ const RenderCards = ({ data, title }) => {
 
 const Home = () => {
     const [loading, setLoading] = useState(false);
-    const [allposts, setAllPosts] = useState([null]);
+    const [allposts, setAllPosts] = useState(null);
 
     const [searchText, setSearchText] = useState('');
 
